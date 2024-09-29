@@ -1,97 +1,99 @@
-<html>
-<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://kado-untukmu.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" /><script src="https://kado-untukmu.likeadream.repl.co/script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+  <meta charset="utf-8" />
+  <meta name="description" content="@feelthisray - Script HTML by Feeldream Repl Co">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+  <title>Berapa nih🫣 - Script HTML buat Kamu</title>
+  
+  <link rel="icon" type="image/svg+xml" href="https://feeldreams.github.io/main-icon.png"> 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /><link rel="stylesheet" href="https://htmlku.com/berapanih/style.css">
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
 
 </head>
+
 <body>
-<style>
-body{background-image: url("https://i.postimg.cc/dtnfMN6c/IMG-20211103-181126-886.jpg");background-repeat: no-repeat;background-size: 105% 105%;animation:none;transition:all .3s ease;}
-</style>
-<div id='konten'><div class="foto"><div class="image">
-<!-- Foto --><img id="ftKm" src="https://i.postimg.cc/0jyyvR8J/images.jpg" width="100px" height="100px" onClick="klikfoto();"/></div>
-<span style="font-weight:700;font-size: 13px" id="sp1"><div id="lope" style="display:inline-block;align-items:center;justify-content:center;">&#9829;</div></span>
-<div id="sp2" style="display:none;"><span style="font-weight:700;font-size: 13px" id="finish"></span></div>
-</div>
+  <audio src="https://feeldreams.github.io/audio/foreveryoung.mp3" id="linkmp3" class="sembunyi"></audio>
+	<div class="overlay">
+    <div class="loading-message">Hai kamu!<br>Tunggu dulu ya..</div>
+     <div id="loveIn" class="blocklove">
+        <a href="#" target="_blank" class="lovein"><svg class='line' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g transform='translate(2.550170, 3.550158)'><path d='M0.371729633,8.89614246 C-0.701270367,5.54614246 0.553729633,1.38114246 4.07072963,0.249142462 C5.92072963,-0.347857538 8.20372963,0.150142462 9.50072963,1.93914246 C10.7237296,0.0841424625 13.0727296,-0.343857538 14.9207296,0.249142462 C18.4367296,1.38114246 19.6987296,5.54614246 18.6267296,8.89614246 C16.9567296,14.2061425 11.1297296,16.9721425 9.50072963,16.9721425 C7.87272963,16.9721425 2.09772963,14.2681425 0.371729633,8.89614246 Z'></path><path d='M13.23843,4.013842 C14.44543,4.137842 15.20043,5.094842 15.15543,6.435842'></path></g></svg></a>
+        <p id="ket">Sentuh LOVEnya!</p>
+     </div>
+   </div>
+   
+   <div id="bodyblur">
+     <img src="https://i.ibb.co.com/s9xrgVK/a05d56d3d8c40c65dc903d837e05e2b2.jpg" id="wallpaper"/>
+   </div>
+   
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+    	
+      <div class="swiper-slide">
+      	<div id="stiker1" class="scale0 stiker">
+        <img src="https://feeldreams.github.io/hearthappy.gif"/>
+       </div>
+      	<h1 id="teks1" class="scale0 quicksand" style="font-size: 20px;">Aku Mau Nanya<br>ke Kamu Nih 🫣<br><br> >>>></h1>
+      </div>
+      
+      <div class="swiper-slide">
+      	<div id="stiker2" class="scale0 stiker">
+        <img src="https://feeldreams.github.io/mikir.gif"/>
+       </div>
+      	<h1 id="teks2" class="scale0 quicksand" style="font-size: 20px;"><span style="font-size:26px;color:pink">1 + 1</span><br>Berapa yaa? 😆<br><br> >>>></h1>
+      </div>
+      
+      <div class="swiper-slide">
+      	<div id="stiker3" class="scale0 stiker">
+        <img id="stikerAkhir1" src="https://feeldreams.github.io/pandajalan.gif"/>
+        <img id="stikerAkhir2" class="sembunyi" src="https://feeldreams.github.io/emawh.gif"/>
+       </div>
+      	<h1 id="teks3" class="scale0 quicksand" style="font-size: 20px;">Jawab di Sini yaa! 🫣<br><br> >>>></h1>
+      
+      <div id="calculator" class="scale0 calculator">
+        <input type="text" class="calculator-screen" id="screen" disabled>
+        <div class="calculator-keys">
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">9</button>
+            <button type="button" class="operator">C</button>
 
-<audio style="display:none;margin:20px 0;" controls autoplay loop>
-  <source src="LINK" type="audio/mpeg">
-</audio>
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button type="button" class="operator">-</button>
 
-<div id='scrollImage'>
-  <p>Hai&nbsp;<b id="kamu"></b>&nbsp;manis ><</p>
-  <p>Ciyeeeee</p>
-  <p>yang hari ini ultah</p>
-  <p>Panjang umur yaa</p>
-  <p>Makin tua aja nih wkwk</p>
-  <p>Candaa wlee<img style="margin-left:10px;" alt="Pentol" src="https://c.tenor.com/AlUwZp0ih_wAAAAi/pentol-quby.gif" height="70" /></p>
-  <p>Oh iya</p>
-  <p>Sehat selalu yaa</p>
-  <p>Gak boleh males-malesan lagi</p>
-  <p>Makin rajin belajarnya</p>
-  <p>Harus jadi yang lebih baik</p>
-  <p><img style="margin-right:10px;" alt="Pentol" src="https://c.tenor.com/1Si3A6alsiEAAAAi/pentol-quby.gif" height="70" />
-  Okeyy?</p>
-  <p>Wish you all the best&nbsp;<span id="wrnRed">><</span></p>
-  <p>Sekian &#10084;&#65039;</p>
-  <p>Klik Foto di atas~<img style="margin-left:10px;" alt="Pentol" src="https://c.tenor.com/oQ_6wxtMrx0AAAAi/pentol-quby.gif" height="70" /></p>
-</div></div>
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button" class="operator">+</button>
 
-<div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div></div>
-<script>  
-var a=0,finish;
-finish = "Selamat ulang tahun";
-            
-//Opsi WhatsApp
- function bukaWa(){window.location = "https://api.whatsapp.com/send?phone=&text=Hai, Aku " + "*" + nama + "*" + "%0A%0A" + "*" + nama + "*" + " udah bacain semuanya. Makasih yaaa" + " *" + author + "* " + "udah bikinin ini semua><" + "%0A%0A" + "*" + "Dikirim:" + "*" + "%20" + dateTime;} 
-</script>
- 
-<script type="text/javascript">            
-            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
-            const swals = Swal.mixin({
-                cancelButtonColor: '#909090',
-                confirmButtonColor: '#00B487',
-                allowOutsideClick: false,
-            });
-            async function mulai(){
-                var { value: nama } = await swals.fire({
-                    title: 'Nama kamu?',
-                    input: 'text',
-                    confirmButtonText: 'Lanjut',
-                    showCancelButton: false,
-                });                           
-                if(nama){
-                	window.nama = nama;
-                    finish = finish + ", " + nama + "!";    
-                    document.getElementById("kamu").innerHTML = "" + window.nama;                      
-                	var { value: author } = await swals.fire({
-                    title: nama + ' tau Aku siapa? Spill namanya dong!',
-                    input: 'text',
-                    confirmButtonText: 'Lanjut',
-                    showCancelButton: false,
-                    });                
-                  if(author != nama){
-                    document.getElementById("sp1").innerHTML = "Dari " + author + ", Untuk " + window.nama + "!";
-                	window.author = author;                   
-                    await swals.fire(`Sekarang lihat ini ya &#10084;&#65039;`);
-                    setTimeout(showDiv, 100);                                    
-               } else {
-                    await swals.fire('Nama tidak boleh kosong/sama dengan nama kamu!');
-                    mulai();
-                }
-                } else {
-                    await swals.fire('Nama tidak boleh kosong, ya!');
-                    mulai();
-                }
-            }
-//funct Mulai
-mulai()            
-</script>
-<script>
-  function nonDiv() {document.getElementById('konten').style.opacity = "0";} function showDiv() {document.getElementById('konten').style.opacity = "1";document.getElementById('konten').style.top = "0";document.querySelector("body").style.animation = "anim 9s ease infinite";}
-  function tombol() {document.getElementById('contTom').style.margin = "0";document.getElementById('contTom').style.opacity = "1";var e1 = document.getElementById('ftKm');e1.classList.add("degdeg");}  
-  function klikfoto() {document.getElementById('sp1').style.display = "none";document.getElementById('sp2').style.display = "block";if(a<finish.length){document.getElementById("finish").innerHTML += finish.charAt(a);a++;setTimeout(klikfoto,100);} if(a==finish.length){setTimeout(tombol,500);}}
-</script>
+            <button type="button">0</button>
+            <button type="button" class="operator">%</button>
+            <button type="button" class="operator">×</button>
+            <button type="button" class="equals operator">=</button>
+          </div>
+        </div>
+        <p id="teksLoveU" class="sembunyi">I Love U 1% ❤️</p>
+        <p id="teksRandomEmoji" class="sembunyi">💙💚💛💜</p>
+        
+        <div id="contentAkhir" class="containerAkhir sembunyi">
+           <h1 id="teksAkhir" class="sembunyi quicksand" style="font-size: 18px;font-weight:400">Apa bedanya bakso sama kamu? 🫣<br>-<br>Kalo bakso dikasih kuah,<br>Kalo kamu dikasih muuaacchh 😘🥰😭🫵</h1>
+        </div>
+      </div>
+      
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://htmlku.com/berapanih/script.js"></script>
+  
 </body>
+
 </html>
