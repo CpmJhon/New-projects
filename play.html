@@ -121,10 +121,10 @@ p{opacity:0;color:var(--warna-teks);font-size:15px;font-weight:700;line-height:1
   function showDiv() {pergantian();setTimeout(kpemb,100);document.getElementById('Content').style = "opacity:1;margin-top:10vh;animation:kont 5s infinite;";document.querySelector("body").style.animation = "none 8s ease infinite";} function kpemb() {bq.style = "opacity:1;visibility:visible;margin-top:5px";}
   
   function loadbrn(){
-  	fotosatu.src = gambar1;
+      fotosatu.src = gambar1;
       fotodua.src = gambar2;
       fototiga.src = gambar3;
-      /*fotoempat.src = gambar4;
+      fotoempat.src = gambar4;
       fotolima.src = gambar5;
       fotoenam.src = gambar6;
       fototujuh.src = gambar7;
@@ -176,13 +176,13 @@ p{opacity:0;color:var(--warna-teks);font-size:15px;font-weight:700;line-height:1
   } else {
     setInterval(berjatuhan, 200);
     setTimeout(bawahlagi, 500);
-    /*setTimeout(tombol,500);*/
+    setTimeout(tombol,500);*/
   }
 }
     
   ftganti = 1;
   function ftmuncul(){
-    //if(ftganti==1){fotosatu.src = deffotostiker;}
+    if(ftganti==1){fotosatu.src = deffotostiker;}
     if(ftganti==2){fotosatu.src = fotodua.src;}
     if(ftganti==3){fotosatu.src = fototiga.src;}
     if(ftganti==4){fotosatu.src = fotoempat.src;}
@@ -283,13 +283,13 @@ window.addEventListener("load", (event) => {
 
 async function ptawal(){
 var { isConfirmed: tny } = await swals.fire({
-    title: 'Lanjut Melihat Script Ini<br>atau<br>Script  HTML Lainnya?',
+    title: 'Lanjut Melihat Pacar yang kamu kirim Ini?<br>atau<br>Script  HTML Lainnya?',
     confirmButtonText: 'Lanjut',
     cancelButtonText: 'Lainnya',
-    showCancelButton: false,
+    showCancelButton: true,
 });
 if(!tny){
-  window.location.replace("https://web.feeldream.repl.co/");
+  window.location.replace("https://github.com/CpmJhon/");
 }
   }
     setTimeout(ptawal,500);
