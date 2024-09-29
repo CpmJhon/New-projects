@@ -94,10 +94,10 @@ p{opacity:0;color:var(--warna-teks);font-size:15px;font-weight:700;line-height:1
 
    <div id='Content'>
    	
-   <p id="ket">Welcome to My script Cpm_Jhon<3</p>
+   <p id="ket">Welcome to Cpm_Jhon Web <3</p>
    <div><div id="loveIn" class="awalan">
      <svg class='line' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><g transform='translate(2.000000, 2.000000)'><path d='M9.27542857,0.714285714 C14.0030476,0.714285714 17.836381,4.54666667 17.836381,9.2752381 C17.836381,14.0038095 14.0030476,17.8361905 9.27542857,17.8361905 C4.54685714,17.8361905 0.71447619,14.0038095 0.71447619,9.2752381 C0.71447619,4.54666667 4.54685714,0.714285714 9.27542857,0.714285714 Z'></path><path d='M17.8989524,16.487619 C18.678,16.487619 19.3094286,17.12 19.3094286,17.8980952 C19.3094286,18.6780952 18.678,19.3095238 17.8989524,19.3095238 C17.1199048,19.3095238 16.4875238,18.6780952 16.4875238,17.8980952 C16.4875238,17.12 17.1199048,16.487619 17.8989524,16.487619 Z'></path></g></svg>
-     <label>Halo Sayang Akunya🥰</label>
+     <label>Halo orang cinta</label>
    </div></div>
 
    <!-- Foto Atas --><div><img id="fotosatu" src=""/><img id="fotodua" src=""/><img id="fototiga" src=""/><img id="fotoempat" src=""/><img id="fotolima" src=""/><img id="fotoenam" src=""/><img id="fototujuh" src=""/><img id="fotodelapan" src=""/><img id="fotosembilan" src=""/></div>
@@ -108,10 +108,12 @@ p{opacity:0;color:var(--warna-teks);font-size:15px;font-weight:700;line-height:1
    <p id="kalimatc"></p>
    </blockquote></div>
 
-   <div id="Tombol">
-       <a onClick="sjawab()">
-         <b>💌 Balas</b>
-       </a>
+   <!-- Tombol Kirim Pesan -->
+   <div id="contTom">
+      <a id="By" class='button' onClick="jawab_y()">💌 Rindu</a>
+      <a id="Bn" class='button' onClick="jawab_n()">Engga</a>
+   </div>
+
    </div>
 
 <!-- Jangan Edit Bagian Ini --><script>
@@ -130,7 +132,26 @@ p{opacity:0;color:var(--warna-teks);font-size:15px;font-weight:700;line-height:1
       fotosembilan.src = gambar9;*/
   }
 
-  async function jawab(){await swals.fire('Kirim pesan ke<br>WhatsApp aku, ya!');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
+  function tombol(){contTom.style="opacity:1;transform: scale(1);";ftom=1;} ftom=0; function fakhiran(){document.getElementById("akhiran").style = "display:inline-flex";}
+  const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040',}); const swalsy = Swal.mixin({confirmButtonText: 'Iya', allowOutsideClick: false,}); const swalst = Swal.mixin({allowOutsideClick: false, showConfirmButton: false, timer: 1200, timerProgressBar: true, didOpen: () => {Swal.showLoading();const b = Swal.getHtmlContainer().querySelector('b');timerInterval = setInterval(() => {Swal.getTimerLeft()}, 100)},willClose: () => {clearInterval(timerInterval)}}); const style = document.createElement('style'); var today = new Date();var dd = String(today.getDate()).padStart(2, '0');var mm = String(today.getMonth() + 1).padStart(2, '0');var yyyy = today.getFullYear();const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
+  function otomatis() {befanimkata();setTimeout(animkata,200);} function befanimkata(){kalimat.style="transform:scale(.5);";} function animkata() {kalimat.style="transform:scale(1);";}
+
+  function otomatis2() {befanimkataa();setTimeout(animkataa,200);} function befanimkataa(){kalimatc.style="transform:scale(.3);font-size:14px;margin-top:30px;";} function animkataa() {kalimatc.style="transform:scale(1);font-size:14px;margin-top:30px;";}
+
+  function finalakhir(){ftom=2;otomatis2();By.innerHTML = "Kirim Pesan";kalimatc.innerHTML = "Jawabanmu: " + pesanwhatsapp;} 
+  function sjawab_y(){if(ftom==1){kalimatc.innerHTML = "";otomatis2();jawab();} if(ftom==2){menuju();}}
+  async function jawab_y(){await swalst.fire({title: '' + pesanjawab_y, timer: 2000, imageUrl: '' + stikerpesanjawab_y.src,});}
+  async function jawab_n(){await swalst.fire({title: '' + pesanjawab_n, timer: 2000, imageUrl: '' + stikerpesanjawab_n.src,});}
+  
+  var aa=0,katangetik;function ngetik() {if(aa<katangetik.length){kalimat.innerHTML += katangetik.charAt(aa);aa++;setTimeout(ngetik,50);}}
+  function bawahlagi(){kalimatc.style="margin-top:10px;";kalimatc.innerHTML = emot;}
+  function kemunculanber(){setInterval(berjatuhan,200);}
+  const body = document.querySelector("body"); audio = new Audio('' + linkmp3.src); function berjatuhan() {const heart = document.createElement("div"); heart.className = "fas fa-heart"; heart.style.left = (Math.random() * 90)+"vw"; heart.style.animationDuration = (Math.random()*3)+2+"s"; body.appendChild(heart);} setInterval(function name(params) {var heartArr = document.querySelectorAll(".fa-heart"); if (heartArr.length > 100) {heartArr[0].remove()}},100);
+  
+  function tfkata(){fkata+=1;} function bersihkan(){kalimat.innerHTML = "";}
+  
+  const textContainer = document.getElementById('text-container');
+  let index = 0;
   function displayText() {
   kalimat.style.display = "none";
   if (index < perkata.length) {
@@ -161,7 +182,7 @@ p{opacity:0;color:var(--warna-teks);font-size:15px;font-weight:700;line-height:1
     
   ftganti = 1;
   function ftmuncul(){
-    //if(ftganti==1){fotosatu.src = deffotostiker;}
+    if(ftganti==1){fotosatu.src = deffotostiker;}
     if(ftganti==2){fotosatu.src = fotodua.src;}
     if(ftganti==3){fotosatu.src = fototiga.src;}
     if(ftganti==4){fotosatu.src = fotoempat.src;}
@@ -206,7 +227,7 @@ window.addEventListener("load", (event) => {
 
 <script type="text/javascript">
 
-       async function menuju(){await swals.fire('Kirim pesan ke WhatsApp aku, ya!');window.location = "https://wa.link/zukeru" + pesanwhatsapp;}
+       async function menuju(){await swals.fire('Kirim pesan ke WhatsApp aku, ya!');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
 
        async function jawab(){
            var { value: jawaban } = await swals.fire({
@@ -215,7 +236,7 @@ window.addEventListener("load", (event) => {
            });
            if(jawaban && jawaban.length < 21){
            	window.jawaban = jawaban;
-               pesanwhatsapp = pesanjawaban_y;
+               pesanwhatsapp = jawaban;
                finalakhir();
            } else {
                await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 20 karakter, ya!');jawab();
@@ -235,8 +256,8 @@ window.addEventListener("load", (event) => {
          perkata = ["Makasih ya", "Udah", "Jadi", "Sosok", "Terbaik", "di Hidupku"];
          emot = "😍🥰🫶🫰💗";
          
-         pesanwhatsapp = "Yeaayy! Maacii sayaangggkuu 😍❤️";
-         setTimeout(kpemb,200);
+         pesanjawab_y = "Yeaayy! Maacii sayaangggkuu 😍❤️";
+         pesanjawab_n = "Yaahh ko gitu sih 🫠";
          
          fotosatu.style="display:inline-flex";audio.play();showDiv()
        } 
@@ -262,7 +283,7 @@ window.addEventListener("load", (event) => {
 
 async function ptawal(){
 var { isConfirmed: tny } = await swals.fire({
-    title: 'Lanjut Melihat Script Yang di kirim pacar mu ini?<br>atau<br>Script Lainnya?',
+    title: 'Lanjut Melihat Script Yang di kirim pacar mu ini?<br>atau<br>Script Jhon Lainnya?',
     confirmButtonText: 'Lanjut',
     cancelButtonText: 'Lainnya',
     showCancelButton: true,
