@@ -232,11 +232,11 @@ window.addEventListener("load", (event) => {
        async function jawab(){
            var { value: jawaban } = await swals.fire({
                title: 'Ketik Pesan Kamu &#128073;&#128072;', 
-               input: 'text', allowOutsideClick: true, showCancelButton: false,
+               input: 'text', allowOutsideClick: true, showCancelButton: true,
            });
            if(jawaban && jawaban.length < 21){
            	window.jawaban = jawaban;
-               pesanwhatsapp = jawaban;
+               pesanwhatsapp = pesanjawaban_y;
                finalakhir();
            } else {
                await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 20 karakter, ya!');jawab();
