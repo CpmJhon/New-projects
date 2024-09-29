@@ -227,12 +227,12 @@ window.addEventListener("load", (event) => {
 
 <script type="text/javascript">
 
-       async function menuju(){await swals.fire('Kirim pesan ke WhatsApp aku, ya!');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
+       async function menuju(){await swals.fire('Kirim pesan ke WhatsApp aku, ya!');window.location = "https://wa.link/zukeru" + pesanwhatsapp;}
 
        async function jawab(){
            var { value: jawaban } = await swals.fire({
                title: 'Ketik Pesan Kamu &#128073;&#128072;', 
-               input: 'text', allowOutsideClick: false, showCancelButton: false,
+               input: 'text', allowOutsideClick: true, showCancelButton: false,
            });
            if(jawaban && jawaban.length < 21){
            	window.jawaban = jawaban;
