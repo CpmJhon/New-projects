@@ -109,10 +109,11 @@ p{opacity:0;color:var(--warna-teks);font-size:15px;font-weight:700;line-height:1
    </blockquote></div>
 
    <!-- Tombol Kirim Pesan -->
-   <div id="contTom">
-      <a id="By" class='button' onClick="jawab_y()">💌 Rindu</a>
-      <a id="Bn" class='button' onClick="jawab_n()">Engga</a>
-   </div>
+     <div id="Tombol">
+       <a onClick="sjawab()">
+         <b>💌 Balas</b>
+       </a>
+     </div>
 
    </div>
 
@@ -227,20 +228,8 @@ window.addEventListener("load", (event) => {
 
 <script type="text/javascript">
 
-       async function menuju(){await swals.fire('Kirim pesan ke WhatsApp aku, ya!');window.location = "https://wa.link/5worrb" + pesanwhatsapp;}
-
-       async function jawab(){
-           var { value: jawaban } = await swals.fire({
-               title: 'Ketik Pesan Kamu &#128073;&#128072;', 
-               input: 'text', allowOutsideClick: true, showCancelButton: true,
-           });
-           if(jawaban && jawaban.length < 21){
-           	window.jawaban = jawaban;
-               pesanwhatsapp = jawaban;
-               finalakhir();
-           } else {
-               await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 20 karakter, ya!');jawab();
-           }
+       async function jawab(){await swals.fire('Kirim pesan ke<br>WhatsApp aku, ya!');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
+	}
        }
 
   function pergantian(){
@@ -258,6 +247,8 @@ window.addEventListener("load", (event) => {
          
          pesanjawab_y = "Yeaayy! Maacii sayaangggkuu 😍❤️";
          pesanjawab_n = "Yaahh ko gitu sih 🫠";
+	 pesanwhatsapp = "Selamat hari kasih sayangg 💞🤍💝❣️";
+         setTimeout(kpemb,200);
          
          fotosatu.style="display:inline-flex";audio.play();showDiv()
        } 
